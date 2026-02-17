@@ -20,7 +20,7 @@ header, footer {
 /* Image box shadow */
 #my-image {
     box-shadow: 0 0 2px 1px black;
-    max-width: 100%;
+    max-width: 400px;
     height: auto;
 }
 
