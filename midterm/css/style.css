@@ -76,7 +76,7 @@ nav a {
 /* ==============================
    Article & Text Wrapping
 ============================== */
-article img.article-image {
+.article-image {
     float: left;
     width: 200px;
     margin-right: 20px;
@@ -84,7 +84,7 @@ article img.article-image {
     border: 1px solid #ccc;
 }
 
-/* Clearfix to wrap text properly around images */
+/* Clearfix for text wrapping */
 article::after {
     content: "";
     display: table;
@@ -97,51 +97,6 @@ article::after {
 section ul {
     list-style-type: disc;
     padding-left: 20px;
-}
-
-/* ==============================
-   Form (if you add one later)
-============================== */
-.contact {
-    border: 1px solid #999;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-.contact .field {
-    margin-bottom: 15px;
-}
-
-.contact label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.contact input[type="text"],
-.contact input[type="email"],
-.contact textarea {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-/* Radio buttons layout */
-.radio-section p {
-    margin-bottom: 10px;
-}
-
-.radio-section label {
-    display: inline;
-    margin-right: 5px;
-}
-
-.radio-section input {
-    margin-right: 15px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 5px 15px;
 }
 
 /* ==============================
