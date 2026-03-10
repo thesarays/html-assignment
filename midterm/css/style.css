@@ -1,48 +1,55 @@
-/* General Layout */
+/* ==============================
+   General Layout
+============================== */
 body {
-    background-color: #aad4cf; /* Primary Color as requested */
+    background-color: #aad4cf; /* Primary color */
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
-#container {
+main {
     max-width: 900px;
     margin: 0 auto;
-    background-color: #f1f7f6; /* Light background for content area */
-    border: 1px solid #777;
+    background-color: #f1f7f6; /* Light content background */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Header & Banner */
-.header-banner {
-    position: relative; /* Necessary for absolute positioning of H1 */
+/* ==============================
+   Header & Banner
+============================== */
+header {
+    position: relative; /* For absolute positioning of title */
     width: 100%;
 }
 
-.main-banner-img {
+header img {
     width: 100%;
     display: block;
 }
 
-h1 {
+header .site-title {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: 0;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
 }
 
-/* Navigation */
+/* ==============================
+   Navigation
+============================== */
 nav {
     background-color: #cadbd8;
     border-bottom: 1px solid #999;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -66,58 +73,65 @@ nav a {
     font-weight: bold;
 }
 
-/* Main Content Styles */
-main {
-    padding: 30px;
-}
-
-/* Article: Text Wrapping Requirement */
-.wrap-img {
-    float: left; /* This creates the wrapping effect */
+/* ==============================
+   Article & Text Wrapping
+============================== */
+article img.article-image {
+    float: left;
     width: 200px;
     margin-right: 20px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
 }
 
-/* Clearfix for the float */
-.clearfix::after {
+/* Clearfix to wrap text properly around images */
+article::after {
     content: "";
-    clear: both;
     display: table;
+    clear: both;
 }
 
-/* Form Styling */
+/* ==============================
+   Facts Section
+============================== */
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* ==============================
+   Form (if you add one later)
+============================== */
 .contact {
     border: 1px solid #999;
     padding: 20px;
     margin-top: 30px;
 }
 
-.field {
+.contact .field {
     margin-bottom: 15px;
 }
 
-label {
+.contact label {
     display: block;
     margin-bottom: 5px;
 }
 
-input[type="text"], 
-input[type="email"], 
-textarea {
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
     width: 100%;
     padding: 8px;
-    box-sizing: border-box; /* Ensures width includes padding */
+    box-sizing: border-box;
 }
 
-/* Radio Button Layout */
+/* Radio buttons layout */
 .radio-section p {
     margin-bottom: 10px;
 }
 
 .radio-section label {
-    display: inline; /* Keeps labels on the same line */
+    display: inline;
     margin-right: 5px;
 }
 
@@ -130,8 +144,12 @@ button {
     padding: 5px 15px;
 }
 
-/* Footer */
+/* ==============================
+   Footer
+============================== */
 footer {
     text-align: right;
     padding: 10px 30px;
+    background-color: #cadbd8;
+    border-top: 1px solid #999;
 }
