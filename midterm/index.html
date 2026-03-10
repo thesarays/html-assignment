@@ -10,7 +10,7 @@
 
     <!-- Header -->
     <header>
-        <img src="images/starfish-wide.jpg" alt="Starfish header">
+        <img src="images/starfish-wide.jpg" alt="Starfish header" class="main-banner-img">
         <h1 class="site-title">Lone Starfish</h1>
 
         <!-- Navigation -->
@@ -42,6 +42,36 @@
                 <li>Herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
                 <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
             </ul>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <h2>Contact to learn more</h2>
+            <form class="contact-form">
+                <div class="field">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+
+                <div class="field">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="field">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Type your message"></textarea>
+                </div>
+
+                <div class="field radio-section">
+                    <p>Would you like to visit the starfish?</p>
+                    <label><input type="radio" name="visit" value="yes"> Yes</label>
+                    <label><input type="radio" name="visit" value="no"> No</label>
+                    <label><input type="radio" name="visit" value="maybe"> Maybe</label>
+                </div>
+
+                <button type="submit">SEND</button>
+            </form>
         </section>
 
     </main>
