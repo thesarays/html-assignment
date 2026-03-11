@@ -1,77 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lone Starfish</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* General Layout */
+body {
+    background-color: #aad4cf;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
 
-    <!-- Header -->
-    <header>
-        <img src="images/starfish-wide.jpg" alt="Starfish header">
-        <h1 class="site-title">Lone Starfish</h1>
+/* Header */
+header {
+    position: relative;
+}
 
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Story</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+header img {
+    width: 100%;
+    display: block;
+}
 
-    <!-- Main Content -->
-    <main>
+.site-title {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
 
-        <!-- Article -->
-        <article>
-            <h2>Life of a Starfish</h2>
-            <img src="images/starfish-small.jpg" alt="Starfish" class="article-image">
-            <p>Swallower catla Black angelfish grunter striped bass scissor-tail rasbora; slender mola. Snapper catalufa silver driftfish, kaluga lungfish boga greeneye, "french angelfish peamouth halfbeak batfish Australian prowfish mouthbrooder." Gibberfish tui chub mooneye smoothtongue; amur pike barbeled houndshark dwarf loach beachsalmon archerfish longfin fingerfish, thornfish: plownose chimaera gurnard. Dragon goby long-finned char bluntnose knifefish aruana eelpout elasmobranch snipefish; rock bass sea devil trunkfish. Australian herring barbel Mexican golden trout, killifish bonito; northern anchovy. Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra. Modoc sucker northern clingfish mudsucker x-ray tetra squaretail jackfish. Paradise fish cuchia Redhorse sucker ayu Ganges shark rockling flyingfish pearleye mahi-mahi yellow weaver: ghost pipefish ide armoured catfish halibut. Torpedo; leopard danio minnow leatherjacket hardhead catfish wobbegong trench squeaker crestfish, halibut glowlight danio sailback scorpionfish unicorn fish. Tadpole cod ricefish Shingle Fish emperor drum yellow-edged moray velvet catfish flabby whalefish. Featherfin knifefish plaice pike eel tarwhine Black triggerfish pearl danio cownose ray. Merluccid hake, platy peamouth humuhumunukunukuapua'a barred danio. Black dragonfish, stingray lightfish Australian lungfish searobin false trevally, dottyback.</p>
-        </article>
+/* Navigation */
+nav {
+    background-color: #cadbd8;
+    border-bottom: 1px solid #999;
+}
 
-        <!-- Facts Section -->
-        <section>
-            <h2>Facts About Starfish</h2>
-            <ul>
-                <li>Australian herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
-                <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
-                <li>Herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
-                <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
-            </ul>
-        </section>
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-        <!-- Contact Form -->
-        <section>
-            <h2>Contact to learn more</h2>
-            <form>
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name">
+nav li {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #999;
+}
 
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email">
+nav li:last-child {
+    border-right: none;
+}
 
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message"></textarea>
+nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
 
-                <p>Would you like to visit the starfish?</p>
-                <label><input type="radio" name="visit" value="yes"> Yes</label>
-                <label><input type="radio" name="visit" value="no"> No</label>
-                <label><input type="radio" name="visit" value="maybe"> Maybe</label>
+/* Main Content */
+main {
+    padding: 30px;
+}
 
-                <button type="submit">SEND</button>
-            </form>
-        </section>
+/* Article Image */
+.article-image {
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
 
-    </main>
+/* Clearfix */
+article::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2026 Lone Starfish
-    </footer>
+/* Form Styles */
+form {
+    border: 1px solid #999;
+    padding: 20px;
+    margin-top: 30px;
+}
 
-</body>
-</html>
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 8px 15px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: right;
+    padding: 10px 0;
+}
