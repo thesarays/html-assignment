@@ -1,28 +1,29 @@
 /* General Layout */
-body {
+html, body {
+    margin: 0;
+    padding: 0;
     background-color: #aad4cf;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0; /* remove top/bottom padding so header touches top */
 }
 
 /* Header */
 header {
     position: relative;
+    width: 100%;
 }
 
 header img {
     display: block;
-    width: 100%;   /* make image full width */
+    width: 100%;   /* full width */
     height: auto;  /* keep proportions */
     margin: 0;     /* remove extra space */
 }
 
 .site-title {
     position: absolute;
-    top: 20px; /* adjust vertical position of title */
+    top: 50%;               /* vertical center on image */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     color: white;
     font-size: 3rem;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
