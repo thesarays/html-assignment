@@ -1,0 +1,162 @@
+/* ========================
+   General Layout
+======================== */
+body {
+    background-color: #aad4cf; /* Primary color */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f1f7f6;
+}
+
+/* ========================
+   Header & Banner
+======================== */
+.header-banner {
+    position: relative;
+    width: 100%;
+}
+
+.main-banner-img {
+    width: 100%;
+    display: block;
+}
+
+.site-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    margin: 0;
+}
+
+/* ========================
+   Navigation
+======================== */
+nav {
+    background-color: #cadbd8;
+    border-bottom: 1px solid #999;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #999;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ========================
+   Article
+======================== */
+article {
+    margin-top: 20px;
+}
+
+.wrap-img {
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Clearfix for floats */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ========================
+   Facts List
+======================== */
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* ========================
+   Contact Form
+======================== */
+.contact {
+    border: 1px solid #999;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #e3f0ee;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.radio-section p {
+    margin-bottom: 10px;
+}
+
+.radio-section label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 6px 18px;
+    background-color: #aad4cf;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #87bcbc;
+}
+
+/* ========================
+   Footer
+======================== */
+footer {
+    text-align: right;
+    padding: 10px 30px;
+    margin-top: 40px;
+    border-top: 1px solid #999;
+}
