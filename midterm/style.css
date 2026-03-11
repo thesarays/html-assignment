@@ -6,24 +6,32 @@ body {
     padding: 20px;
 }
 
-/* Header */
-header {
+/* Header Container */
+.header-container {
     position: relative;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-header img {
-    width: 100%;
+/* Header Image */
+.header-image {
     display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
+/* Site Title */
 .site-title {
     position: absolute;
-    top: 30px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     color: white;
     font-size: 3rem;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    margin: 0;
 }
 
 /* Navigation */
