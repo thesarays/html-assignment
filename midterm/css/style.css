@@ -1,1 +1,114 @@
+/* General Layout */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #aad4cf;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+}
+
+header img {
+    display: block;
+    width: 100%;   /* full width */
+    height: auto;  /* keep proportions */
+    margin: 0;     /* remove extra space */
+}
+
+.site-title {
+    position: absolute;
+    top: 50%;               /* vertical center on image */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    text-align: center;
+    width: 100%;
+}
+
+/* Navigation */
+nav {
+    background-color: #cadbd8;
+    border-bottom: 1px solid #999;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #999;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+}
+
+/* Article Image */
+.article-image {
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Clearfix */
+article::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Form Styles */
+form {
+    border: 1px solid #999;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 8px 15px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: right;
+    padding: 10px 0;
+}
