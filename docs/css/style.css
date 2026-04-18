@@ -1,194 +1,89 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: #333;
-    background-color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header & Navigation */
+/* HEADER - This stays at the very top */
 .header {
     background-color: #222;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 .header .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    width: 180px;
-    margin-bottom: 15px;
-}
-
+/* Nav links styling */
 .nav ul {
     display: flex;
     list-style: none;
-    padding: 0;
-    margin-bottom: 15px;
+    gap: 20px;
 }
 
 .nav a {
-    color: #fff;
+    color: #999; /* Greyed out like the mockup */
     text-decoration: none;
-    padding: 10px 15px;
-    font-weight: bold;
     font-size: 14px;
+    font-weight: bold;
 }
 
-.nav a:hover {
-    color: #c19434;
+.nav a:hover, .nav li:first-child a {
+    color: #c19434; /* Gold highlight for 'Home' */
 }
 
-/* Search bar */
-.search-form {
-    display: flex;
-    border: 1px solid #444;
-}
-
-.search-form input {
-    padding: 5px;
-    border: none;
-    outline: none;
-}
-
-.search-form button {
-    background: #111;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-/* Hero Section */
+/* HERO SECTION - The "Welcome" part */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('../images/main-banner.jpg') no-repeat center center/cover;
+    background: url('../images/main-banner.jpg') no-repeat center center/cover;
     height: 500px;
     display: flex;
-    align-items: center;
-    color: #fff;
+    align-items: center; /* Vertically centers the welcome box */
+    position: relative;
+}
+
+/* The semi-transparent box around the text */
+.hero .container {
+    background-color: rgba(0, 0, 0, 0.7); /* The dark transparent box from mockup */
+    padding: 40px;
+    max-width: 800px;
+    margin-left: 50px; /* Aligns it to the left like the photo */
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    color: #ffffff;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
+.hero p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Hero Button */
 .btn {
     display: inline-block;
     background-color: #c19434;
     color: #000;
-    padding: 12px 25px;
+    padding: 12px 30px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 15px;
+    font-size: 16px;
 }
 
-/* About Section */
-.about {
-    background-color: #fceabb; /* That cream/tan color */
-    padding: 50px 0;
-}
-
-.about .container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* Services Sections */
-.services {
-    padding: 50px 0;
-}
-
-.services-top, .services-bottom {
-    display: grid;
-    grid-template-columns: 1fr; /* Mobile stack */
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.services article {
-    background-color: #fceabb;
-    text-align: left;
-}
-
-.services img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.services h3, .services p, .services a {
-    margin: 15px;
-}
-
-.services a {
-    display: inline-block;
-    background: #222;
-    color: #fff;
-    padding: 8px 15px;
-    text-decoration: none;
-}
-
-/* Team Section */
-.team {
-    padding: 50px 0;
-}
-
-.team article {
-    display: flex;
-    flex-direction: column;
-    background: #fceabb;
-    margin-bottom: 20px;
-}
-
-.team img {
-    width: 100%;
-    max-width: 400px;
-}
-
-.team div {
-    padding: 20px;
-}
-
-/* --- DESKTOP ADJUSTMENTS --- */
-@media (min-width: 768px) {
-    .header .container {
-        flex-direction: row;
-        justify-content: space-between;
+/* Mobile Adjustments for Hero */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 40px 0;
+    }
+    
+    .hero .container {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px;
     }
 
-    .about .container {
-        flex-direction: row;
-    }
-
-    .about img {
-        width: 50%;
-    }
-
-    .services-top {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .services-bottom {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .team article {
-        flex-direction: row;
+    .hero h1 {
+        font-size: 2.5rem;
     }
 }
