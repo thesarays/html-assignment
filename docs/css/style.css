@@ -16,29 +16,31 @@ img { width: 100%; display: block; }
 .search-form input { border: none; padding: 5px; outline: none; width: 100px; }
 .search-form button { background: #000; border: none; color: #c19434; padding: 0 10px; cursor: pointer; }
 
-/* --- 3. HERO (The "Welcome" Box) --- */
+/* --- 3. HERO (Centered & Bigger) --- */
 .hero { 
     background: url('../images/main-banner.jpg') no-repeat center center/cover; 
-    height: 550px; 
+    height: 650px; /* Increased height for a bigger feel */
     display: flex; 
     align-items: center; 
+    justify-content: center; /* Centers the box horizontally */
 }
 .hero .container { 
     background-color: rgba(0, 0, 0, 0.7); 
-    padding: 60px; 
-    max-width: 750px; 
-    margin-left: 5%; /* Centered a lil bit away from the edge */
+    padding: 80px 40px; /* More padding makes the box look bigger */
+    max-width: 850px; 
+    margin: 0 auto; 
+    text-align: center; /* Centers the text inside the box */
 }
-.hero h1 { color: #fff; font-size: 3.8rem; margin-bottom: 10px; }
-.hero p { color: #fff; font-size: 1.2rem; margin-bottom: 25px; }
-.btn { display: inline-block; background-color: #c19434; color: #000; padding: 12px 35px; text-decoration: none; font-weight: bold; }
+.hero h1 { color: #fff; font-size: 4rem; margin-bottom: 15px; }
+.hero p { color: #fff; font-size: 1.3rem; margin-bottom: 30px; }
+.btn { display: inline-block; background-color: #c19434; color: #000; padding: 15px 40px; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
 
 /* --- 4. ABOUT SECTION --- */
 .about { background: #fceabb; padding: 100px 0; }
 .about .container { display: flex; gap: 40px; align-items: center; }
 .about img { width: 45%; }
 
-/* --- 5. SERVICES (The Video.jpg Row) --- */
+/* --- 5. SERVICES --- */
 .services { padding: 80px 0; }
 .services-top, .services-bottom { display: grid; gap: 25px; margin-top: 20px; }
 @media (min-width: 768px) {
@@ -59,15 +61,23 @@ article a { display: inline-block; background: #222; color: #fff; padding: 10px 
 }
 .vision h2 { font-size: 3rem; margin-bottom: 15px; }
 
-/* --- 7. TEAM (John & Bob - Big and Stacked) --- */
+/* --- 7. TEAM (John and Bob - Alternating Layout) --- */
 .team { padding: 80px 0; }
-.team .container { display: flex; flex-direction: column; gap: 40px; }
+.team .container { display: flex; flex-direction: column; gap: 50px; }
 .team article { display: flex; background-color: #fceabb; width: 100%; }
-.team article img { width: 40%; height: 400px; object-fit: cover; }
-.team article div { width: 60%; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
-.team h3 { font-size: 2rem; }
 
-/* --- 8. CONTACT US (Split 50/50) --- */
+/* Standard layout (John) */
+.team article img { width: 45%; height: 400px; object-fit: cover; }
+.team article div { width: 55%; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+
+/* FLIPPED LAYOUT FOR BOB (Second Article) */
+.team article:nth-of-type(2) {
+    flex-direction: row-reverse; /* Puts image on right, text on left */
+}
+
+.team h3 { font-size: 2.2rem; margin-bottom: 10px; }
+
+/* --- 8. CONTACT US --- */
 .contact { padding: 80px 0; }
 .contact-content { display: grid; gap: 50px; }
 @media (min-width: 768px) {
@@ -93,8 +103,8 @@ iframe { width: 100%; height: 100%; min-height: 400px; border: none; }
     .header .container { flex-direction: column; gap: 15px; }
     .about .container { flex-direction: column; }
     .about img { width: 100%; }
-    .team article { flex-direction: column; }
+    .team article, .team article:nth-of-type(2) { flex-direction: column; } /* Stack normally on mobile */
     .team article img, .team article div { width: 100%; }
-    .hero h1 { font-size: 2.5rem; }
-    .hero .container { margin: 0; padding: 30px; }
+    .hero h1 { font-size: 2.8rem; }
+    .hero .container { padding: 40px 20px; }
 }
