@@ -1,177 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three Star Media</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="header">
-    <div class="container header-container">
-        <img src="images/logo.jpg" alt="Logo" class="logo">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <img src="images/logo.jpg" alt="Logo" class="logo">
 
-        <nav class="nav">
-            <ul class="nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
 
+            <!-- Search -->
             <form class="search-form">
-                <label for="search">Search</label>
-                <input type="text" id="search">
+                <input type="text" placeholder="Search">
                 <button type="submit">🔍</button>
             </form>
-        </nav>
-    </div>
-</header>
-
-<section class="hero">
-    <div class="container hero-content">
-        <h1>Welcome to Three Star Media</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="#" class="btn">Connect with us</a>
-    </div>
-</section>
-
-<section class="about">
-    <div class="container about-content">
-        <img src="images/about.jpg" alt="About us image">
-        <div>
-            <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
-    </div>
-</section>
+    </header>
 
-<section class="services">
-    <div class="container">
-        <h2>Our Services</h2>
 
-        <div class="services-grid">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Three Star Media</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn">Connect with us</a>
+        </div>
+    </section>
 
-            <article class="service-card">
-                <img src="images/digital.jpg" alt="">
-                <div class="service-content">
+
+    <!-- ABOUT -->
+    <section class="about">
+        <div class="container">
+            <img src="images/about.jpg" alt="About image">
+            <div>
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+
+            <!-- Top Services -->
+            <div class="services-top">
+
+                <article>
+                    <img src="images/digital.jpg" alt="">
                     <h3>Digital Transformation</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <a href="#">Digital Plans</a>
-                </div>
-            </article>
+                </article>
 
-            <article class="service-card">
-                <img src="images/marketing.jpg" alt="">
-                <div class="service-content">
+                <article>
+                    <img src="images/marketing.jpg" alt="">
                     <h3>Marketing</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <a href="#">Marketing Plans</a>
-                </div>
-            </article>
+                </article>
 
-            <article class="service-card">
-                <img src="images/video.jpg" alt="">
-                <div class="service-content">
+            </div>
+
+            <!-- Bottom Services -->
+            <div class="services-bottom">
+
+                <article>
+                    <img src="images/video.jpg" alt="">
                     <h3>Video Production</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <a href="#">Video Plans</a>
-                </div>
-            </article>
+                </article>
 
-            <article class="service-card">
-                <img src="images/web.jpg" alt="">
-                <div class="service-content">
+                <article>
+                    <img src="images/web.jpg" alt="">
                     <h3>Web Development</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <a href="#">Web Plans</a>
-                </div>
-            </article>
+                </article>
 
-            <article class="service-card">
-                <img src="images/print.jpg" alt="">
-                <div class="service-content">
+                <article>
+                    <img src="images/print.jpg" alt="">
                     <h3>Print</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <a href="#">Print Plans</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- VISION -->
+    <section class="vision">
+        <div class="container">
+            <h2>Our Vision</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Learn More</a>
+        </div>
+    </section>
+
+
+    <!-- TEAM -->
+    <section class="team">
+        <div class="container">
+            <h2>Our Team</h2>
+
+            <article>
+                <img src="images/john.jpg" alt="John">
+                <div>
+                    <h3>John Doe</h3>
+                    <p>CEO and Co-owner</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </article>
+
+            <article>
+                <img src="images/bob.jpg" alt="Bob">
+                <div>
+                    <h3>Bob Rite</h3>
+                    <p>CFO and Co-owner</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </article>
 
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="team">
-    <div class="container">
-        <h2>Our Team</h2>
 
-        <article class="team-member">
-            <img src="images/john.jpg" alt="John Doe">
-            <div>
-                <h3>John Doe</h3>
-                <p>CEO and Co-owner</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-        </article>
+    <!-- CONTACT -->
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
 
-        <article class="team-member">
-            <img src="images/bob.jpg" alt="Bob Rite">
-            <div>
-                <h3>Bob Rite</h3>
-                <p>CFO and Co-owner</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-        </article>
-    </div>
-</section>
+            <!-- Form -->
+            <div class="contact-content">
 
-<section class="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
+                <div>
+                    <h3>Send us a message</h3>
+                    <form>
+                        <label>Full Name</label>
+                        <input type="text">
 
-        <div class="contact-content">
+                        <label>Email</label>
+                        <input type="email">
 
-            <div class="contact-form">
-                <h3>Send us a message</h3>
-                <form>
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name">
+                        <label>Message</label>
+                        <textarea></textarea>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
 
-                    <label for="message">Message</label>
-                    <textarea id="message"></textarea>
+                <!-- Map -->
+                <div>
+                    <h3>Location</h3>
+                    <iframe src="https://www.google.com/maps?q=Algonquin+College&output=embed"></iframe>
+                </div>
 
-                    <button type="submit">Send</button>
-                </form>
             </div>
 
-            <div class="map">
-                <h3>Location</h3>
-                <iframe src="https://www.google.com/maps?q=Algonquin+College&output=embed"></iframe>
-            </div>
-        </div>
+            <!-- Hours -->
+            <div class="hours">
+                <h3>Hours of operation</h3>
 
-        <div class="hours">
-            <h3>Hours of operation</h3>
-            <table>
-                <thead>
+                <table>
                     <tr>
                         <th>Days</th>
                         <th>Hours</th>
                     </tr>
-                </thead>
-                <tbody>
                     <tr>
                         <td>Monday - Friday</td>
                         <td>9 AM - 6 PM</td>
@@ -180,18 +195,20 @@
                         <td>Saturday - Sunday</td>
                         <td>Closed</td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
+                </table>
+            </div>
 
-<footer class="footer">
-    <div class="container">
-        <p>&copy; Three Star Media, 2020</p>
-        <p>All images are taken from <a href="https://unsplash.com">Unsplash</a></p>
-    </div>
-</footer>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Three Star Media, 2020</p>
+            <p>All images are taken from Unsplash</p>
+        </div>
+    </footer>
 
 </body>
 </html>
