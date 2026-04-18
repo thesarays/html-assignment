@@ -22,24 +22,34 @@ img {
     display: block;
 }
 
+/* COLORS */
+:root {
+    --yellow: #ffe6ac;
+    --dark: #222;
+    --gold: #c78c06;
+    --white: #fff;
+}
+
 /* HEADER */
 .header {
-    background: #222;
-    color: white;
+    background: var(--dark);
+    color: var(--white);
     padding: 10px 0;
 }
 
-.header .container {
+.header-container {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
+.logo {
+    width: 80px;
+}
+
+/* NAV */
 .nav ul {
     list-style: none;
-}
-
-.nav ul li {
-    margin: 5px 0;
 }
 
 .nav a {
@@ -49,52 +59,52 @@ img {
 
 /* HERO */
 .hero {
-    background: #222;
+    background: var(--dark);
     color: white;
-    padding: 60px 0;
     text-align: center;
+    padding: 60px 0;
 }
 
 .btn {
-    background: #c78c06;
+    background: var(--gold);
     color: white;
     padding: 10px 15px;
     display: inline-block;
     margin-top: 10px;
-    text-decoration: none;
 }
 
 /* ABOUT */
 .about {
-    background: #ffe6ac;
-    padding: 20px 0;
+    background: var(--yellow);
+    padding: 30px 0;
 }
 
 /* SERVICES */
-.services-top,
-.services-bottom {
-    display: flex;
-    flex-direction: column;
+.services-grid {
+    display: grid;
     gap: 20px;
 }
 
-.services article {
-    background: #ffe6ac;
+.card {
+    background: var(--yellow);
     padding: 10px;
 }
 
 /* VISION */
 .vision {
-    padding: 20px 0;
+    padding: 40px 0;
+    background: var(--dark);
+    color: white;
+    text-align: center;
 }
 
 /* TEAM */
-.team article {
+.member {
     margin-bottom: 20px;
 }
 
 /* CONTACT */
-.contact-content {
+.contact-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -113,16 +123,16 @@ th, td {
 
 /* FOOTER */
 .footer {
-    background: #222;
+    background: var(--dark);
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
 }
 
-/* MEDIA QUERY */
+/* DESKTOP */
 @media (min-width: 760px) {
 
-    .header .container {
+    .header-container {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -133,22 +143,21 @@ th, td {
         gap: 20px;
     }
 
-    .about .container {
+    .about-container {
         display: flex;
         gap: 20px;
     }
 
-    .services-top,
-    .services-bottom {
-        flex-direction: row;
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .contact-content {
-        flex-direction: row;
-    }
-
-    .team article {
+    .team-grid {
         display: flex;
         gap: 20px;
+    }
+
+    .contact-grid {
+        flex-direction: row;
     }
 }
