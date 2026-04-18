@@ -1,107 +1,102 @@
-/* HEADER - This stays at the very top */
-.header {
-    background-color: #222;
-    padding: 10px 0;
+/* --- 1. CORE SETUP --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Open Sans', sans-serif; line-height: 1.4; color: #333; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+img { width: 100%; display: block; }
+
+/* --- 2. HEADER (Top Half) --- */
+.header { background-color: #222; padding: 10px 0; }
+.header .container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.logo { width: 150px; }
+.nav ul { display: flex; list-style: none; gap: 20px; }
+.nav a { color: #999; text-decoration: none; font-size: 14px; font-weight: bold; }
+
+/* Active/Home highlight from mockup */
+.nav a:hover, .nav li:first-child a { color: #c19434; }
+
+/* Search bar styling */
+.search-form { display: flex; background: #fff; padding: 2px; }
+.search-form input { border: none; padding: 5px; outline: none; width: 100px; }
+.search-form button { background: #000; border: none; color: #c19434; padding: 0 10px; cursor: pointer; }
+
+/* --- 3. HERO (The Welcome Box) --- */
+.hero { 
+    background: url('../images/main-banner.jpg') no-repeat center center/cover; 
+    height: 500px; 
+    display: flex; 
+    align-items: center; 
+}
+.hero .container { 
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 50px; 
+    max-width: 700px; 
+    margin-left: 0; /* Align to left side of office image */
+}
+.hero h1 { color: #fff; font-size: 3.5rem; margin-bottom: 10px; }
+.hero p { color: #fff; margin-bottom: 20px; }
+.btn { 
+    display: inline-block; 
+    background-color: #c19434; 
+    color: #000; 
+    padding: 12px 30px; 
+    text-decoration: none; 
+    font-weight: bold; 
 }
 
-.header .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
+/* --- 4. SERVICES (The video.jpg Row) --- */
+.services { padding: 60px 0; }
+.services-top, .services-bottom { display: grid; gap: 25px; margin-top: 20px; }
 
-/* Nav links styling */
-.nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.nav a {
-    color: #999; /* Greyed out like the mockup */
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.nav a:hover, .nav li:first-child a {
-    color: #c19434; /* Gold highlight for 'Home' */
-}
-
-/* HERO SECTION - The "Welcome" part */
-.hero {
-    background: url('../images/main-banner.jpg') no-repeat center center/cover;
-    height: 500px;
-    display: flex;
-    align-items: center; /* Vertically centers the welcome box */
-    position: relative;
-}
-
-/* The semi-transparent box around the text */
-.hero .container {
-    background-color: rgba(0, 0, 0, 0.7); /* The dark transparent box from mockup */
-    padding: 40px;
-    max-width: 800px;
-    margin-left: 50px; /* Aligns it to the left like the photo */
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.hero p {
-    color: #ffffff;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-/* Hero Button */
-.btn {
-    display: inline-block;
-    background-color: #c19434;
-    color: #000;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-/* Mobile Adjustments for Hero */
-@media (max-width: 768px) {
-    .hero {
-        height: auto;
-        padding: 40px 0;
-    }
-    
-    .hero .container {
-        margin-left: 20px;
-        margin-right: 20px;
-        padding: 20px;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-}
-
-/* --- ADDED VIDEO.JPG SECTION BELOW --- */
-
-/* Style the images in the bottom row (including video.jpg) */
-.services-bottom article img {
-    width: 100%;
-    height: 200px;    /* Keeps all 3 images the same height */
-    object-fit: cover; /* Prevents squishing */
-}
-
-/* Make sure the bottom row has 3 columns on desktop */
 @media (min-width: 768px) {
-    .services-bottom {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-    }
+    .services-top { grid-template-columns: 1fr 1fr; }
+    .services-bottom { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.services article { background-color: #fceabb; padding-bottom: 20px; }
+.services article img { height: 200px; object-fit: cover; margin-bottom: 15px; }
+.services h3, .services p { padding: 0 20px; margin-bottom: 10px; }
+.services article a { 
+    display: inline-block; 
+    background: #222; 
+    color: #fff; 
+    padding: 10px 20px; 
+    margin: 10px 20px; 
+    text-decoration: none; 
+}
+
+/* --- 5. TEAM (Bob & John side-by-side) --- */
+.team { padding: 60px 0; }
+.team .container { display: grid; gap: 20px; }
+
+@media (min-width: 768px) {
+    .team .container { grid-template-columns: 1fr 1fr; } /* John and Bob side by side */
+}
+
+.team article { 
+    display: flex; /* Image next to text */
+    background-color: #fceabb; 
+}
+.team article img { width: 45%; height: auto; object-fit: cover; }
+.team article div { width: 55%; padding: 20px; }
+
+/* --- 6. CONTACT & TABLE --- */
+.contact-content { display: grid; gap: 40px; margin: 30px 0; }
+@media (min-width: 768px) {
+    .contact-content { grid-template-columns: 1fr 1fr; }
+}
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+th { background-color: #fceabb; }
+
+/* --- 7. MOBILE FIX --- */
+@media (max-width: 768px) {
+    .header .container { flex-direction: column; gap: 15px; }
+    .hero { height: auto; padding: 40px 0; }
+    .hero .container { margin: 0; }
+    .team article { flex-direction: column; }
+    .team article img, .team article div { width: 100%; }
 }
